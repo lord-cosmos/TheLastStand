@@ -5,3 +5,5 @@
 /ProjectSettings/
 Temp/
 /Library
+
+.DS_Store

@@ -65,6 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/ShootProjectile.cs" />
+    <Compile Include="Assets/Scripts/EnemyBehavior.cs" />
+    <Compile Include="Assets/Scripts/EnemyShooting.cs" />
     <Compile Include="Assets/Scripts/DestroyObject.cs" />
     <Compile Include="Assets/Scripts/MouseLook.cs" />
     <Compile Include="Assets/Scripts/AircraftController.cs" />

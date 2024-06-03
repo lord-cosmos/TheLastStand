@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PimbieShip (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9161340844570537131, guid: b17882d066aba394dac85746d25eadfd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 353487718}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -260,6 +264,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1158561113003540375, guid: 70bc6b6358059e04bbf40b0ecb70b375, type: 3}
       insertIndex: -1
       addedObject: {fileID: 353487729}
+    - targetCorrespondingSourceObject: {fileID: 1158561113003540375, guid: 70bc6b6358059e04bbf40b0ecb70b375, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 353487730}
   m_SourcePrefab: {fileID: 100100000, guid: 70bc6b6358059e04bbf40b0ecb70b375, type: 3}
 --- !u!4 &353487718 stripped
 Transform:
@@ -328,6 +335,32 @@ MonoBehaviour:
   rollPower: 100
   yawPower: 80
   enginePower: 90
+--- !u!143 &353487730
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353487719}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 3.147872
+  m_Radius: 6.739796
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &407433565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9148328567788902429, guid: d0ee9ecd775e34846983a62b384b28da, type: 3}
@@ -363,18 +396,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 154.6
@@ -419,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PimbieShip
       objectReference: {fileID: 0}
+    - target: {fileID: 9161340844570537131, guid: b17882d066aba394dac85746d25eadfd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 353487718}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -518,11 +543,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &723461209 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-  m_PrefabInstance: {fileID: 1887704648}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &950985443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,6 +756,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PimbieShip (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9161340844570537131, guid: b17882d066aba394dac85746d25eadfd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 353487718}
+    - target: {fileID: 9161340844570537131, guid: b17882d066aba394dac85746d25eadfd, type: 3}
+      propertyPath: movementSpeed
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -793,16 +821,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PimbieShip (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9161340844570537131, guid: b17882d066aba394dac85746d25eadfd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 353487718}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b17882d066aba394dac85746d25eadfd, type: 3}
---- !u!4 &1319838998 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-  m_PrefabInstance: {fileID: 2048176269}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1887704648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,67 +839,56 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 333.4
+      value: 333.37274
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.8
+      value: 42.750706
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 853
+      value: 853.0101
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.029216189
+      value: 0.09687237
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 6.3854616e-10
+      value: -0.01569629
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9995731
+      value: -0.98236114
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000021846398
+      value: 0.15917286
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 18.041
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -176.652
+      value: -168.146
       objectReference: {fileID: 0}
     - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 3.719
       objectReference: {fileID: 0}
     - target: {fileID: 5680212195413233824, guid: b17882d066aba394dac85746d25eadfd, type: 3}
       propertyPath: m_Name
       value: PimbieShip (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9161340844570537131, guid: b17882d066aba394dac85746d25eadfd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 353487718}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1319838998}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b17882d066aba394dac85746d25eadfd, type: 3}
 --- !u!1 &1902721184
@@ -978,75 +994,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 407433569}
   m_SourcePrefab: {fileID: 100100000, guid: d0ee9ecd775e34846983a62b384b28da, type: 3}
---- !u!1001 &2048176269
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 723461209}
-    m_Modifications:
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 24.134373
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.899999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 54.106804
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -176.652
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017003701735442970, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5680212195413233824, guid: b17882d066aba394dac85746d25eadfd, type: 3}
-      propertyPath: m_Name
-      value: PimbieShip (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b17882d066aba394dac85746d25eadfd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

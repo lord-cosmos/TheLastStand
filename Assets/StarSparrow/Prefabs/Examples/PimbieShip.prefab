@@ -1734,6 +1734,9 @@ GameObject:
   - component: {fileID: 5017003701735442970}
   - component: {fileID: 8228113749338080703}
   - component: {fileID: 6184804126860063093}
+  - component: {fileID: 9161340844570537131}
+  - component: {fileID: 5076275647666665028}
+  - component: {fileID: 7945272565488006317}
   m_Layer: 0
   m_Name: PimbieShip
   m_TagString: Untagged
@@ -1807,3 +1810,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9161340844570537131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680212195413233824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c110570edd7374e86b6c35f9d764e7cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  movementSpeed: 60
+  minDistance: 100
+--- !u!114 &5076275647666665028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680212195413233824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43bf1adba13d465dbc17a0833cbbaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5625865085699229976, guid: bb25a0a9ea0aed041a63018d1956d0b9, type: 3}
+  projectileSpeed: 1000
+  minInterval: 1
+  maxInterval: 3
+--- !u!65 &7945272565488006317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680212195413233824}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.601949, y: 4.238168, z: 11.1021805}
+  m_Center: {x: 0.42807168, y: -0.0000007982388, z: 0.1162436}

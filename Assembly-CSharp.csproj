@@ -67,8 +67,8 @@
     <Compile Include="Assets/Scripts/ShootProjectile.cs" />
     <Compile Include="Assets/Scripts/DestroyObject.cs" />
     <Compile Include="Assets/Scripts/MouseLook.cs" />
-    <Compile Include="Assets/Scripts/PlayerController.cs" />
-    <Compile Include="Assets/Scripts/PlayerShipController.cs" />
+    <Compile Include="Assets/Scripts/AircraftController.cs" />
+    <Compile Include="Assets/Scripts/AsteroidSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Mochie/Common/Color.cginc" />

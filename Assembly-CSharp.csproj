@@ -64,33 +64,48 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.27f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/EnemyMothershipAppear.cs" />
     <Compile Include="Assets/Scripts/ShootProjectile.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/LookAt.cs" />
+    <Compile Include="Assets/Scripts/GameMusicOnCamera.cs" />
     <Compile Include="Assets/Scripts/EnemyBehavior.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/BlackHoleCamera.cs" />
+    <Compile Include="Assets/Starfield Skybox/Demo/Script/LookCamera.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/BlackHoleRenderer.cs" />
     <Compile Include="Assets/Scripts/EnemyShooting.cs" />
     <Compile Include="Assets/Scripts/DestroyObject.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/BlackHoleSphere.cs" />
     <Compile Include="Assets/Scripts/MouseLook.cs" />
     <Compile Include="Assets/Scripts/AircraftController.cs" />
     <Compile Include="Assets/Scripts/AsteroidSpawner.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/MouseOrbit.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/AutoBehaviour.cs" />
+    <Compile Include="Assets/BlackHole/Scripts/AsteroidRotation.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/Assets/shaders/Blackhole.shader" />
     <None Include="Assets/Mochie/Common/Color.cginc" />
     <None Include="Assets/Mochie/ScreenFX Shader/SFXDefines.cginc" />
     <None Include="Assets/Mochie/Uber Shader/USBRDF.cginc" />
     <None Include="Assets/Mochie/Common/Utilities.cginc" />
     <None Include="Assets/Mochie/Particle Shader/PSDefines.cginc" />
+    <None Include="Assets/BlackHole/Shader/BlackHoleNoDupli.shader" />
     <None Include="Assets/Mochie/Classyham-Holofoil.shader" />
     <None Include="Assets/Mochie/Uber Shader/USUtilities.cginc" />
     <None Include="Assets/Mochie/Uber Shader/Uber.shader" />
     <None Include="Assets/Particle Attractor by Moonflower Carnivore/Shaders/Particles Additive Intensify.shader" />
     <None Include="Assets/Mochie/ScreenFX Shader/SFXUtilities.cginc" />
+    <None Include="Assets/BlackHole/Shader/Resources/BlackHoleDistortion.shader" />
     <None Include="Assets/Mochie/Uber Shader/USLighting.cginc" />
     <None Include="Assets/Mochie/ScreenFX Shader/SFXFunctions.cginc" />
     <None Include="Assets/Mochie/Particle Shader/PSFunctions.cginc" />
     <None Include="Assets/Mochie/Uber Shader/USXFeatures.cginc" />
     <None Include="Assets/Mochie/Uber Shader/USPass.cginc" />
     <None Include="Assets/Mochie/ScreenFX Shader/SFXXPasses.cginc" />
+    <None Include="Assets/BlackHole/Shader/BlackHoleSphere.shader" />
     <None Include="Assets/Particlecollection_Free samples/Plugins/Effect/Shader/ParticleAddEffect.shader" />
     <None Include="Assets/Mochie/ScreenFX Shader/SFX X.shader" />
+    <None Include="Assets/BlackHole/Shader/BlackHole.shader" />
     <None Include="Assets/Mochie/ScreenFX Shader/SFXXDefines.cginc" />
     <None Include="Assets/Mochie/Particle Shader/Particle.shader" />
     <None Include="Assets/Mochie/Particle Shader/PSXFeatures.cginc" />

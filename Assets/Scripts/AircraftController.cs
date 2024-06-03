@@ -10,6 +10,8 @@ public class AircraftController : MonoBehaviour
     private float activeRoll, activePitch, activeYaw;
 
     private float activePitchPower, activeYawPower;
+    public AudioClip throttleSFX;
+    public float throttleVolume = 0.4f;
 
     void Start()
     {
@@ -43,6 +45,7 @@ public class AircraftController : MonoBehaviour
         // Handle pitch and roll based on throttle
         if (throttle)
         {
+            AudioSource.PlayClipAtPoint(throttleSFX, transform.position, throttleVolume);
             activePitch = Input.GetAxisRaw("Vertical") * pitchPower * Time.fixedDeltaTime;
             activeRoll = Input.GetAxisRaw("Horizontal") * rollPower * Time.fixedDeltaTime;
         }

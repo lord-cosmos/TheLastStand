@@ -2,14 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MSFX
   m_Shader: {fileID: 4800000, guid: 59e95fd81cd9e734f838e83e6faf1482, type: 3}
-  m_ShaderKeywords: EFFECT_BUMP _TEAMCOLOR_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - EFFECT_BUMP
+  - _TEAMCOLOR_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -17,6 +22,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - ALWAYS
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -40,8 +46,9 @@ Material:
         m_Texture: {fileID: 2800000, guid: c8a87249cd434b7449f48c64971ebc8e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-    - _Amplitude: 0
+    - _Amplitude: 0.03
     - _AutoShift: 0
     - _AutoShiftSpeed: 0.25
     - _BlendMode: 0
@@ -111,8 +118,8 @@ Material:
     - _LetterboxStr: 0
     - _Luminance: 0
     - _ManualScrub: 0
-    - _MaxRange: 15
-    - _MinRange: 8
+    - _MaxRange: 50
+    - _MinRange: 49.99
     - _NMFOpacity: 1
     - _NMFToggle: 0
     - _Noise: 0
@@ -157,10 +164,10 @@ Material:
     - _ScrubPos: 0
     - _ShakeMaxRange: 15
     - _ShakeMinRange: 8
-    - _ShakeModel: 0
-    - _ShakeSpeedX: 0.5234375
+    - _ShakeModel: 2
+    - _ShakeSpeedX: 0.5
     - _ShakeSpeedXY: 5
-    - _ShakeSpeedY: 0.78125
+    - _ShakeSpeedY: 0.45
     - _ShakeUseGlobal: 1
     - _Shift: 0
     - _ShiftX: 0
@@ -197,3 +204,4 @@ Material:
     - _TPColor: {r: 1, g: 1, b: 1, a: 1}
     - _TPNoiseScroll: {r: 0, g: 0, b: 0, a: 0}
     - _TPScroll: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

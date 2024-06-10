@@ -1,37 +1,40 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ShootProjectile : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public float projectileSpeed = 1000f;
-    GameObject currentProjectilePrefab;
+    public float shootingInterval = 0.1f; // Time between each shot
     public AudioClip playerShootSFX;
-    public float shootingVolume = 0.8f;
+    public float shootingVolume = 0.5f; // Volume for the shooting sound
+
+    private float lastShotTime;
 
     void Start()
     {
-        currentProjectilePrefab = projectilePrefab;
+        lastShotTime = -shootingInterval; // Allows shooting immediately when the game starts
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && Time.time - lastShotTime >= shootingInterval)
         {
-            // Play shooting sound at low volume
-            AudioSource.PlayClipAtPoint(playerShootSFX, transform.position, shootingVolume);
-
-            // Instantiate the projectile slightly in front of the player
-            GameObject projectile = Instantiate(currentProjectilePrefab, transform.position + transform.forward, transform.rotation) as GameObject;
+            Shoot();
+            lastShotTime = Time.time;
         }
     }
 
-    private void FixedUpdate()
+    void Shoot()
     {
-    }
+        GameObject projectile = Instantiate(projectilePrefab, (transform.position - new Vector3(0, 5, 0)) + transform.forward, transform.rotation) as GameObject;
 
+        //Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        //rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
+
+        projectile.transform.SetParent(GameObject.FindGameObjectWithTag("ProjectileParent").transform);
+
+        AudioSource.PlayClipAtPoint(playerShootSFX, transform.position, shootingVolume);
+
+        Destroy(projectile, 4f);
+    }
 }

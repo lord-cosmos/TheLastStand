@@ -75,4 +75,20 @@ public class AircraftController : MonoBehaviour
                          -activeRoll * rollPower * Time.fixedDeltaTime,
                          Space.Self);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // IN HERE WE NEED TO DETECT IF THE OBJECT WE COLLIDE WITH IS A WORLD OBJECT
+        // AND REDUCE THE PLAYERS HP AS WELL AS BOUNCE THEM AWAY.
+        Debug.Log("Player struck an object, this still needs to be implemented.");
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        // IN HERE WE NEED TO REDUCE THE PLAYERS HP AFTER CHECKING THAT THE PARTICLE WE COLLIDE WITH IS NOT
+        // FROM THE PLAYERS GUN.
+        Debug.Log("Player was hit by enemy fire, this still needs to be implemented");
+    }
+
+
 }

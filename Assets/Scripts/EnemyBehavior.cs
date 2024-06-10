@@ -4,9 +4,24 @@ public class EnemyBehavior : MonoBehaviour
 {
     public Transform player; // Reference to the player's transform
     public float movementSpeed = 5f; // Speed at which the enemy moves towards the player
-    public float minDistance = 100f; // Minimum distance to maintain from the player
+    float initialMoveSpeed;
+    public float minDistance = 50f; // Minimum distance to maintain from the player
+    float initialMinDistance;
+    public int health = 100;
 
-    private void Update()
+    public static int enemyCount = 0;
+
+    private Animator animator; // Reference to the Animator component
+
+    void Start()
+    {
+        enemyCount++;
+        animator = GetComponent<Animator>(); // Get the Animator component
+        initialMoveSpeed = movementSpeed;
+        initialMinDistance = minDistance;
+    }
+
+    private void FixedUpdate()
     {
         // Check if the player's transform is assigned
         if (player != null)
@@ -21,14 +36,78 @@ public class EnemyBehavior : MonoBehaviour
             if (distanceToPlayer < minDistance)
             {
                 directionToPlayer *= -1; // Move away from the player
+                movementSpeed = initialMoveSpeed * 150;
+                minDistance = initialMinDistance * 8;
+                foreach (Transform child in gameObject.transform)
+                {
+                    if (child.name == "MachineGunHolder")
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+                }
+            }
+            else
+            {
+                foreach (Transform child in gameObject.transform)
+                {
+                    if (child.name == "MachineGunHolder")
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                }
+                movementSpeed = initialMoveSpeed;
+                minDistance = initialMinDistance;
             }
 
             // Smoothly rotate towards the player's position
             Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.fixedDeltaTime * 5f);
 
             // Move towards the player
-            transform.position += transform.forward * movementSpeed * Time.deltaTime;
+            transform.position += transform.forward * movementSpeed * Time.fixedDeltaTime;
+        }
+
+
+    }
+
+    private void OnCollisionEnter(UnityEngine.Collision other)
+    {
+        // Check if the enemy collides with an object tagged "PlayerBullet"
+        //if (other.gameObject.CompareTag("PlayerBullet"))
+        //{
+        // Destroy(other.gameObject); // Destroy the bullet
+        Debug.Log("Hit");
+        Destroy(gameObject);
+
+        //}
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("Enemy hit, this is not fully implemented");
+        // NEED TO DETECT IF HIT BY PLAYER SO THEY ARE NOT IMMEDIATELY DESTROYED
+        if (other.CompareTag("Player"))
+        {
+            // Reduce players HP by large margin to punish for collision
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(other);
+            Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        Debug.Log("1adasdsa");
+        enemyCount--;
+        if (enemyCount <= 0)
+        {
+            FindObjectOfType<LevelManager>().LevelBeat();
+
+        }
+    }
+
+
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyMothershipAppear : MonoBehaviour
 {
-    [SerializeField] private Vector3 targetPosition = new Vector3(-0.00312386f, 105.0014f, 908f); // Target position for the spaceship to appear
+    [SerializeField] private Vector3 targetPosition = new Vector3(-3051, 54, 8771); // Target position for the spaceship to appear
     public float appearDuration = 3f; // Duration for the spaceship to appear
 
     private Vector3 initialPosition; // Initial position of the spaceship

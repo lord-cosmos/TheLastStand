@@ -12,7 +12,10 @@ public class EnemyBehavior : MonoBehaviour
     public static int enemyCount = 0;
 
     private Animator animator; // Reference to the Animator component
-
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Start()
     {
         enemyCount++;
@@ -98,14 +101,27 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    private void IncreasePlayerScore(int score)
+    {
+        PlayerHealth.playerScore += score;
+        Debug.Log("Player score : " + PlayerHealth.playerScore);
+        PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.SetScoreText();
+        }
+    }
+
     private void OnDestroy()
     {
-        Debug.Log("1adasdsa");
         enemyCount--;
+        print("from destroy " + enemyCount);
+        IncreasePlayerScore(1);
+
         if (enemyCount <= 0)
         {
             FindObjectOfType<LevelManager>().LevelBeat();
-
+            PlayerHealth.playerScore = 0;
         }
     }
 

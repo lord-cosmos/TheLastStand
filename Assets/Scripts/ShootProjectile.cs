@@ -26,12 +26,13 @@ public class ShootProjectile : MonoBehaviour
 
     void Shoot()
     {
-        GameObject projectile = Instantiate(projectilePrefab, (transform.position - new Vector3(0, 5, 0)) + transform.forward, transform.rotation) as GameObject;
+        print("From shoot: " + projectilePrefab.tag);
+        GameObject projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation) as GameObject;
 
         //Rigidbody rb = projectile.GetComponent<Rigidbody>();
         //rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
 
-        projectile.transform.SetParent(GameObject.FindGameObjectWithTag("ProjectileParent").transform);
+        // projectile.transform.SetParent(GameObject.FindGameObjectWithTag("ProjectileParent").transform);
 
         AudioSource.PlayClipAtPoint(playerShootSFX, transform.position, shootingVolume);
 

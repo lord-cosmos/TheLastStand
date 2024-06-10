@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{65343450-49E1-0387-83CC-3EB99FEA90D9}</ProjectGuid>
+    <ProjectGuid>{5CF49492-EE97-787C-B50E-38A3094F0266}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -69,12 +69,15 @@
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Compile Include="Assets\BlackHole\Scripts\BlackHoleRenderer.cs" />
     <Compile Include="Assets\Scripts\EnemyShooting.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\BlackHole\Scripts\BlackHoleSphere.cs" />
     <Compile Include="Assets\Scripts\pp.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\AircraftController.cs" />
+    <Compile Include="Assets\Scripts\PimbieSpawner.cs" />
     <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
     <Compile Include="Assets\BlackHole\Scripts\MouseOrbit.cs" />
     <Compile Include="Assets\BlackHole\Scripts\AutoBehaviour.cs" />
